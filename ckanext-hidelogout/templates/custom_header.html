@@ -1,0 +1,14 @@
+{% ckan_extends %}
+
+{% block header_account_log_out_link %}
+    {% if not h.should_hide_logout_button() %}
+        <li>
+            <form action="{{ h.url_for('user.logout') }}" method="post">
+                {{ h.csrf_input() }}
+                <button class="btn btn-link" type="submit" aria-label="{{ _('Log out') }}" data-bs-title="{{ _('Log out') }}" data-bs-toggle="tooltip">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </button>
+            </form>
+        </li>
+    {% endif %}
+{% endblock %}

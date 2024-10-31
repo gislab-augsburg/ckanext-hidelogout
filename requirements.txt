@@ -1,0 +1,2 @@
+# Add any CKAN or plugin dependencies here
+
